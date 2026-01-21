@@ -34,9 +34,8 @@ Aimi is a next-generation AI chat platform that unifies multiple foundation mode
 | **Browser Agents** | Autonomous browser automation with live streaming view |
 | **Aimi Health** | Medical AI with image analysis and 8+ trusted health sources |
 | **Code Execution** | Python/JS in browser with 75+ packages (NumPy, Pandas, etc.) |
-| **Coder Mode** | GLM-4.7 480B - world's best coding model (73.8% SWE-bench) |
+| **Coder Mode** | world's best coding models |
 | **Presentations** | AI-generated PowerPoint with 6+ types and PPTX export |
-| **Study Lab** | NotebookLM-style learning with flashcards, quizzes, mind maps |
 | **Memory System** | Cross-chat persistent memory that learns about you |
 | **Custom Experts** | 50+ pre-built AI experts + create your own with knowledge bases |
 | **API Access** | REST API with OpenAI-compatible format |
@@ -53,11 +52,11 @@ Five specialized AI agents collaborate on each query:
 
 | Step | Agent | Model | Role |
 |------|-------|-------|------|
-| 1 | Deconstructor | Claude Opus 4.5 | Break query into verifiable claims and sub-questions |
-| 2 | Evidence Hunter | Gemini 3 Pro | Find evidence FOR and AGAINST each claim with web search |
-| 3 | Adversary | GPT-5.2 | Steel-man opposing arguments, identify blind spots |
-| 4 | Integrator | Claude Opus 4.5 | Reconcile conflicts into structured synthesis |
-| 5 | Verifier | Gemini 3 Pro | Fact-check claims, fix unsupported statements, final polish |
+| 1 | Deconstructor | Break query into verifiable claims and sub-questions |
+| 2 | Evidence Hunter | Find evidence FOR and AGAINST each claim with web search |
+| 3 | Adversary | Steel-man opposing arguments, identify blind spots |
+| 4 | Integrator | Reconcile conflicts into structured synthesis |
+| 5 | Verifier | Fact-check claims, fix unsupported statements, final polish |
 
 ### Features
 
@@ -147,12 +146,6 @@ NIH • Mayo Clinic • CDC • WHO • OpenFDA • RxNorm • MedlinePlus • C
 - **Appointment prep**: Questions to ask your doctor
 - **Mental wellness**: Support and resources
 
-### Models
-
-| Tier | Vision Model |
-|------|--------------|
-| Free | Gemini 2.5 Flash-Lite |
-| Plus/Ultra | Mistral Large 2512 |
 
 *Always reminds users to consult healthcare professionals.*
 
@@ -172,7 +165,7 @@ Execute Python and JavaScript directly in the browser with instant output.
 
 ### Coder Mode (Ultra Only)
 
-Specialized coding assistant using GLM-4.7 (480B parameters).
+Specialized coding assistant.
 
 - **73.8% SWE-bench** score
 - **84.9% LiveCodeBench** pass rate
@@ -184,19 +177,19 @@ Specialized coding assistant using GLM-4.7 (480B parameters).
 
 ## 📊 Other Features
 
-### 🎤 Voice Mode
+###  Voice Mode
 Neural TTS with 11 ElevenLabs voices, word-level highlighting, and streaming playback.
 
-### 🖼️ Image Generation
+###  Image Generation
 4K AI images, 20+ art styles, intelligent prompt enhancement, ~15 second generation.
 
-### 📊 Presentations
+### Presentations
 AI PowerPoint with 6+ types (Pitch Deck, Business Review, Technical, etc.), speaker notes, PPTX export.
 
-### 🧠 Memory System
+###  Memory System
 AI learns about you across conversations. 6 categories, privacy controls, cross-chat persistence.
 
-### 👩‍💼 Custom Experts
+###Custom Experts
 50+ pre-built AI experts + create your own with custom instructions and knowledge files.
 
 ---
@@ -250,9 +243,9 @@ curl -X POST https://aimichat.app/api/ai/v1/chat/completions \
 
 | Provider | Use Case |
 |----------|----------|
-| Amazon Bedrock | Foundation models, agents, knowledge bases |
-| Cerebras | Ultra-fast inference (world's fastest) |
-| NVIDIA NIM | Premium DeepSeek R1, Kimi K2, GLM-4.7 |
+| Amazon Bedrock
+| Cerebras
+| NVIDIA NIM 
 
 ---
 
@@ -267,15 +260,7 @@ curl -X POST https://aimichat.app/api/ai/v1/chat/completions \
 
 ---
 
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
-
----
-
 ## License
 
 MIT
+
