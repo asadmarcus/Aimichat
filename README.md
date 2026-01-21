@@ -2,7 +2,7 @@
 
 **Enterprise-grade AI platform with multi-modal capabilities, autonomous agents, and real-time inference.**
 
-[Live Demo](https://aimichat.app)
+[Live site](https://aimichat.app) • [API Docs](https://aimichat.app/api-docs.html)
 
 ---
 
@@ -12,17 +12,216 @@ Aimi is a next-generation AI chat platform that unifies multiple foundation mode
 
 ---
 
+##  Pricing
+
+| Tier | Credits/Day | Price | Quality Modes |
+|------|-------------|-------|---------------|
+| **Free** | 100 | $0 | Standard |
+| **Plus** | 500 | $15/mo | Fast (0.5x) & Balanced (1x) |
+| **Ultra** | 2,000 | $50/mo | Fast, Balanced & Premium |
+
+---
+
 ## Core Capabilities
 
 | Capability | Description |
 |------------|-------------|
-| **Multi-Model Inference** | Route requests across Cerebras, Amazon Bedrock, and NVIDIA NIM for optimal latency and cost |
-| **Deep Research** | Multi-source web research with automatic citation and synthesis |
-| **Autonomous Agents** | Browser automation agents that can navigate, extract, and interact with any website |
-| **Voice Interface** | Real-time bidirectional voice with streaming transcription and synthesis |
-| **Custom Experts** | Build domain-specific AI assistants with custom instructions and knowledge bases |
-| **RAG Pipeline** | Vector-based retrieval over uploaded documents (PDF, DOCX, TXT, MD) |
-| **Document Export** | Generate PDF, DOCX, PPTX, XLSX from conversations |
+| **Genius Mode** | 5-agent multi-AI collaboration using Claude Opus 4.5, GPT-5.2, and Gemini 3 Pro |
+| **Deep Research** | Academic-grade research with 200M+ peer-reviewed papers and proper citations |
+| **Reasoning** | Step-by-step logical reasoning with transparent chain-of-thought |
+| **Voice Interface** | Real-time TTS with word-level highlighting and 11 neural voices |
+| **Image Generation** | 4K AI images with 20+ art styles and prompt enhancement |
+| **Browser Agents** | Autonomous browser automation with live streaming view |
+| **Aimi Health** | Medical AI with image analysis and 8+ trusted health sources |
+| **Code Execution** | Python/JS in browser with 75+ packages (NumPy, Pandas, etc.) |
+| **Coder Mode** | GLM-4.7 480B - world's best coding model (73.8% SWE-bench) |
+| **Presentations** | AI-generated PowerPoint with 6+ types and PPTX export |
+| **Study Lab** | NotebookLM-style learning with flashcards, quizzes, mind maps |
+| **Memory System** | Cross-chat persistent memory that learns about you |
+| **Custom Experts** | 50+ pre-built AI experts + create your own with knowledge bases |
+| **API Access** | REST API with OpenAI-compatible format |
+
+---
+
+##  Genius Mode
+
+Genius is Aimi's premium multi-agent reasoning system that orchestrates multiple frontier AI models to deliver comprehensive, well-researched answers with adversarial verification.
+
+### How It Works
+
+Five specialized AI agents collaborate on each query:
+
+| Step | Agent | Model | Role |
+|------|-------|-------|------|
+| 1 | Deconstructor | Claude Opus 4.5 | Break query into verifiable claims and sub-questions |
+| 2 | Evidence Hunter | Gemini 3 Pro | Find evidence FOR and AGAINST each claim with web search |
+| 3 | Adversary | GPT-5.2 | Steel-man opposing arguments, identify blind spots |
+| 4 | Integrator | Claude Opus 4.5 | Reconcile conflicts into structured synthesis |
+| 5 | Verifier | Gemini 3 Pro | Fact-check claims, fix unsupported statements, final polish |
+
+### Features
+
+- **Multi-source research**: Web search, ArXiv papers, Semantic Scholar full-text, Google Scholar
+- **Adversarial verification**: Every claim challenged with evidence gathered for both sides
+- **Transparent reasoning**: View full thinking process from each agent
+- **Confidence scoring**: Calibrated confidence ratings with justification
+- **Self-correction**: Verifier fixes any unsupported claims before final output
+- **Credit cost**: Reason (200) • Research (250)
+
+### Requirements
+
+- Ultra tier subscription
+- Reason or Research mode selected
+
+---
+
+## Deep Research
+
+Academic-grade research with proper citations from 200M+ peer-reviewed papers.
+
+### Data Sources
+
+| Database | Papers | Coverage |
+|----------|--------|----------|
+| OpenAlex | 200M+ | All disciplines |
+| CrossRef | 140M+ | DOI-verified |
+| arXiv | 2M+ | STEM preprints |
+
+### Features
+
+- **17 output types**: Research Paper, Literature Review, Case Study, White Paper, Meta-Analysis, etc.
+- **Parallel querying**: Searches all databases simultaneously
+- **Proper citations**: Inline with DOI links, APA/MLA/Chicago styles
+- **Semantic chunking**: Prioritizes abstract, methodology, conclusions
+- **Text-first output**: View formatted text, download as PDF on demand
+
+### Limits by Tier
+
+| Tier | Academic Papers | Web Sources | Min Words |
+|------|-----------------|-------------|-----------|
+| Free | 12 | 6 | 1,500 |
+| Plus | 16 | 8 | 2,000-3,000 |
+| Ultra | 25 | 10 | 3,000-5,000 |
+
+---
+
+##  Browser Agents
+
+Autonomous browser automation with live streaming view. Watch AI navigate in real-time.
+
+### Features
+
+- **Live streaming**: See the browser as AI controls it
+- **Persistent profiles**: Stay logged into sites across sessions
+- **Session management**: Save and resume browser states
+- **File handling**: Upload/download files
+- **OAuth integration**: Connect accounts securely
+- **Secrets vault**: Store credentials safely
+- **Task templates**: Reusable automation workflows
+- **Human handoff**: Take control when AI needs help
+
+### Capabilities
+
+Navigate websites • Fill forms • Extract data • Take screenshots • Download files • Multi-step workflows • Error recovery
+
+### Requirements
+
+- Ultra tier only
+
+---
+
+##  Aimi Health
+
+Privacy-focused health companion with medical API integration and image analysis.
+
+### Medical Sources
+
+NIH • Mayo Clinic • CDC • WHO • OpenFDA • RxNorm • MedlinePlus • ClinicalTrials.gov
+
+### Features
+
+- **Medical image analysis**: X-rays, ECGs, lab reports, skin conditions
+- **Lab interpretation**: Values with reference ranges
+- **Drug info**: Interactions, dosages, side effects
+- **Symptom analysis**: Plain language explanations
+- **Appointment prep**: Questions to ask your doctor
+- **Mental wellness**: Support and resources
+
+### Models
+
+| Tier | Vision Model |
+|------|--------------|
+| Free | Gemini 2.5 Flash-Lite |
+| Plus/Ultra | Mistral Large 2512 |
+
+*Always reminds users to consult healthcare professionals.*
+
+---
+
+## 💻 Code Execution & Coder Mode
+
+### In-Browser Execution (All Tiers)
+
+Execute Python and JavaScript directly in the browser with instant output.
+
+- **Python 3.11** via Pyodide (WebAssembly)
+- **JavaScript ES2022+** (native browser)
+- **HTML/CSS** live preview
+- **75+ packages**: NumPy, Pandas, Matplotlib, SciPy, scikit-learn
+- **Secure sandbox**: Isolated execution environment
+
+### Coder Mode (Ultra Only)
+
+Specialized coding assistant using GLM-4.7 (480B parameters).
+
+- **73.8% SWE-bench** score
+- **84.9% LiveCodeBench** pass rate
+- **16K token** output limit
+- **Production-quality** code without placeholders
+- **60x credit multiplier**
+
+---
+
+## 📊 Other Features
+
+### 🎤 Voice Mode
+Neural TTS with 11 ElevenLabs voices, word-level highlighting, and streaming playback.
+
+### 🖼️ Image Generation
+4K AI images, 20+ art styles, intelligent prompt enhancement, ~15 second generation.
+
+### 📊 Presentations
+AI PowerPoint with 6+ types (Pitch Deck, Business Review, Technical, etc.), speaker notes, PPTX export.
+
+### 🧠 Memory System
+AI learns about you across conversations. 6 categories, privacy controls, cross-chat persistence.
+
+### 👩‍💼 Custom Experts
+50+ pre-built AI experts + create your own with custom instructions and knowledge files.
+
+---
+
+## 🔌 API Access
+
+REST API with OpenAI-compatible format.
+
+```bash
+curl -X POST https://aimichat.app/api/ai/v1/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "messages": [{"role": "user", "content": "Hello!"}],
+    "stream": true
+  }'
+```
+
+### Rate Limits
+
+| Tier | Requests/Day |
+|------|--------------|
+| Free | ~100 |
+| Plus | ~500-1000 |
+| Ultra | ~650-4000 |
 
 ---
 
@@ -47,70 +246,13 @@ Aimi is a next-generation AI chat platform that unifies multiple foundation mode
                User Data        RAG Index       Model Inference
 ```
 
-### Compute Layer
-- **AWS Lambda** - Serverless functions with auto-scaling to 10,000+ concurrent executions
-- **AWS Lambda@Edge** - Sub-50ms edge compute across 400+ global PoPs
-- **Amazon API Gateway** - Managed REST/WebSocket APIs with request throttling
-
-### Data Layer
-- **Firebase Firestore** - Multi-region NoSQL with real-time subscriptions
-- **Pinecone** - Purpose-built vector database for semantic search
-- **Amazon S3** - Durable object storage for knowledge base documents
-
 ### AI Layer
-- **Amazon Bedrock** - Managed access to Claude, Titan, and other foundation models
-- **Amazon Bedrock Agents** - Autonomous multi-step reasoning with tool orchestration
-- **Amazon Bedrock Knowledge Bases** - Fully managed RAG with automatic chunking and embedding
-- **Cerebras** - Wafer-scale inference for ultra-low latency generation
-- **NVIDIA NIM** - Optimized model serving on GPU infrastructure
-- **Cloudflare Workers AI** - Edge inference for image generation
 
----
-
-## AWS Expert Agent
-
-A showcase implementation of Amazon Bedrock Agents for enterprise AWS support:
-
-- **Scope**: All 200+ AWS services, IAM, networking, serverless, containers, databases
-- **Capabilities**: Debug issues, review architectures, analyze security, optimize costs
-- **Backend**: Claude on Bedrock with optional Knowledge Base for documentation retrieval
-- **Integration**: Supports direct invocation, KB-augmented chat, and full agent orchestration
-
----
-
-## Tech Stack
-
-### Frontend
-| Technology | Purpose |
-|------------|---------|
-| Vite | Build tooling and HMR |
-| React 19 | Component architecture |
-| Three.js | 3D visualizations |
-| Framer Motion | Fluid animations |
-
-### Backend
-| Technology | Purpose |
-|------------|---------|
-| AWS Lambda | Serverless compute |
-| Lambda@Edge | Edge computing |
-| API Gateway | API management |
-| CloudFront | Global CDN |
-
-### AI/ML
 | Provider | Use Case |
 |----------|----------|
 | Amazon Bedrock | Foundation models, agents, knowledge bases |
-| Cerebras | High-throughput inference |
-| NVIDIA NIM | Premium model serving |
-| Jina AI | Text embeddings |
-| Pinecone | Vector similarity search |
-
-### Data
-| Technology | Purpose |
-|------------|---------|
-| Firestore | User data, chat history |
-| Firebase Auth | Identity management |
-| Amazon S3 | Document storage |
+| Cerebras | Ultra-fast inference (world's fastest) |
+| NVIDIA NIM | Premium DeepSeek R1, Kimi K2, GLM-4.7 |
 
 ---
 
@@ -134,16 +276,6 @@ npm run dev
 
 ---
 
-## Deployment
-
-- **Frontend**: CloudFront + S3 static hosting
-- **Backend**: AWS Lambda via SAM/CDK (deployed separately)
-- **Edge**: Lambda@Edge for latency-critical paths
-
----
-
 ## License
 
 MIT
-
----
